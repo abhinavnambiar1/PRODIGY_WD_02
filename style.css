@@ -1,0 +1,173 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #dbe9ff;
+}
+
+/* .container{
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f9ff;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    width: min(90%, 38em);
+    padding: 3.75em 0;
+    border-radius: 0.8em;
+    box-shadow: 0 1.97em 3.75em rgba(1, 87, 185, 0.2);
+} */
+
+.container{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: min(90%, 38em);
+    left: 50%;
+    top: 50%;
+}
+
+.timer-Display{
+    position: relative;
+    width: 80%;
+    background-color: #3c98ff;
+    margin: auto;
+    margin-top: -5%;
+    /* left: -5%; */
+    padding: 1em 0;
+    font-family: "Roboto Mono", monospace;
+    color: #f0f9ff;
+    font-size: 4em;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 0.3em;
+    box-shadow: 0 0.5em 1em rgba(1, 87, 185, 0.2);
+    transition: 0.5s ease-out;
+    margin: 0 auto 0.5em auto;
+}
+
+
+
+.laps{
+    height: 70px;
+    width: 300px;
+    overflow: hidden;
+    display: none;
+    margin-left: 140px;
+    overflow-y: scroll;
+    align-items: center;
+    justify-content: center;
+    transition: 0.1s smooth;
+    border-style: outset;
+}
+
+li{
+    /* height: 10px; */
+    scroll-behavior: smooth;
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #3c98ff;
+    font-weight: 600;
+    font-size: 1.4em;
+    transition: ease-in;
+}
+
+li:hover{
+    font-size: 1.7em;
+    transition: 0.1s smooth;
+}
+
+.buttons1, .buttons2{
+    width: 90%;
+    margin: 1.5em auto 0 auto;
+    display: flex;
+    /* justify-content: space-around; */
+    justify-content: center;
+    gap: 2vw;
+    
+    /* align-items: center; */
+}
+
+.buttons1 button, .buttons2 button{
+    width: 23vw;
+    height: 10vh;
+    font-size: 1em;
+    background-color: #dbe9ff;
+    color: #3c98ff;
+    font-weight: 500;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: 0.1s;
+    border: outset;
+    font-family: "Poppins", sans-serif;
+    border-radius: 0.5em;
+    padding: 1em 1.5em;
+    cursor: pointer;
+    outline: none;
+}
+
+.buttons1 button:hover, .buttons2 button:hover{
+    background-color: #3c98ff;
+    color: #f0f9ff;
+    font-size: 1.1em;
+    width: 25vw;
+    height: 11vh;
+    transition: 0.2s;
+}
+
+
+
+#startTimer{
+    background-color: #3c98ff;
+    color: #f0f9ff;
+}
+
+/* Making It Responsive */
+@media screen and (max-width: 600px){
+    .container{
+        position: absolute;
+    }
+
+    .timer-Display{
+        position: relative;
+        font-size: 2.5em;
+        width: 90%;
+    }
+
+    .buttons1 button, .buttons2 button{
+        height: 5vh;
+        width: 12vh;
+        font-size: 0.5em;
+    }
+
+    .laps{
+        justify-self: center;
+        margin-left: 60px;
+        width: 60%;
+        height: 45px;
+        border-style: outset;
+    }
+
+    li{
+        margin-right: -10px;
+    }
+
+    .buttons1 button:hover, .buttons2 button:hover{
+        background-color: #3c98ff;
+        color: #f0f9ff;
+        font-size: 0.6em;
+        /* width: 15vw; */
+        transition: width 0.3s, height 0.3s;
+        height: 5.5vh;
+        /* transition: 0.2s; */
+    }
+}
